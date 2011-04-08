@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Reject any commit that would add a line with tabs.
+#
+# You can enable this as a repo policy with
+#
+#   git config hooks.allowtabs true
+
 allowtabs=$(git config hooks.allowtabs)
 
 if [ "$allowtabs" != "true" ] &&
